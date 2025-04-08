@@ -1,5 +1,8 @@
-import { contextBridge } from "electron";
+const { contextBridge } = require('electron');
+const { getMediaInfo } = require('./fetchmedia');
 
-contextBridge.exposeInMainWorld('electronAPI', {
-    // DBus/spotify controls go here
-})
+contextBridge.exposeInMainWorld('media', {
+    getMediaInfo: async () => {
+        return await getMediaInfo();
+    }
+});

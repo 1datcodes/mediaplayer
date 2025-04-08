@@ -13,11 +13,14 @@ function createWindow() {
         alwaysOnTop: true,
         resizable: false,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js'), 
+            preload: path.resolve(__dirname, 'preload.js'), 
+            nodeIntegration: false,
+            contextIsolation: true,
         }
     });
 
     win.loadFile('index.html');
+    win.webContents.openDevTools({ mode: 'detach' });
 }
 
 app.whenReady().then(createWindow);

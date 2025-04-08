@@ -9,3 +9,8 @@ document.getElementById('prev').addEventListener('click', () => {
 document.getElementById('next').addEventListener('click', () => {
     console.log('Next track');
 })
+
+setInterval(async () => {
+    const info = await window.media.getMediaInfo().then(console.log);
+    console.log(window.media)
+}, 3000);
