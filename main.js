@@ -1,12 +1,13 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+require('electron-reload')(path.join(__dirname, 'style.css'), {
+    electron: require(`${__dirname}/node_modules/electron`)
+});
 
 let win;
 
 function createWindow() {
     win = new BrowserWindow({
-        width: 320,
-        height: 100,
         frame: false,
         transparent: true,
         alwaysOnTop: true,

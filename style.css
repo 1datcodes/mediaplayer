@@ -1,19 +1,23 @@
 body {
     margin: 0;
     padding: 0;
-    background: rgba(10, 10, 10, 0.8);
-    font-family: sans-serif;;
+    background: transparent; 
+    font-family: sans-serif;
+    -webkit-app-region: drag;
 }
 
 .widget {
     display: flex;
     align-items: center;
-    background: rgba(20, 20, 20, 0.8);
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.8);
     border-radius: 12px;
     padding: 8px;
     color: white;
     width: 300px;
-    height: 90px;
+    min-height: 90px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -31,7 +35,7 @@ body {
 }
 
 .title {
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     white-space: nowrap;
     overflow: hidden;
@@ -39,7 +43,7 @@ body {
 }
 
 .artist {
-    font-size: 12px;
+    font-size: 14px;
     color: #ccc;
     white-space: nowrap;
     overflow: hidden;
@@ -48,8 +52,9 @@ body {
 
 .controls {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 4px;
+    -webkit-app-region: no-drag;
 }
 
 .controls button {
