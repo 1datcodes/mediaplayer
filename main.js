@@ -1,5 +1,6 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
+const { getMediaInfo } = require('./fetchmedia');
 require('electron-reload')(path.join(__dirname, 'style.css'), {
     electron: require(`${__dirname}/node_modules/electron`)
 });
