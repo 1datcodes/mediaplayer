@@ -1,30 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <title>Electron App</title>
-    </head>
-    <body>
-        <div class="widget">
-            <img id="albumArt" class="album" src="./images/fallback.png" alt="Album Cover" />
-            <div class="info">
-                <div id="title" class="title">Track Title</div>
-                <div id="artist" class="artist">Artist Name</div>
-            </div>
-            <div class="controls">
-                <button id="prev">
-                    <img src="./images/next-button.png" alt="Previous" />
-                </button>
-                <button id="play">
-                    <img src="./images/play.png" alt="Play" />
-                </button>
-                <button id="next">
-                    <img src="./images/next-button.png" alt="Next" />
-                </button>
-            </div>
-        </div>
-        <script src="renderer.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Electron App</title>
+  </head>
+  <body>
+    <div class="widget">
+      <img
+        id="albumArt"
+        class="album"
+        src="./images/fallback.png"
+        alt="Album Cover"
+      />
+      <div class="info">
+        <div id="title" class="title">Track Title</div>
+        <div id="artist" class="artist">Artist Name</div>
+      </div>
+      <div class="controls">
+        <button id="prev">
+          <img src="./images/next-button.png" alt="Previous" />
+        </button>
+        <button id="play">
+          <img src="./images/play.png" alt="Play" />
+        </button>
+        <button id="next">
+          <img src="./images/next-button.png" alt="Next" />
+        </button>
+      </div>
+    </div>
+    <script src="renderer.js"></script>
+  </body>
 </html>
