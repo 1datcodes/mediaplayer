@@ -1,3 +1,5 @@
+const { getMediaInfo } = require('./fetchmedia');
+
 document.getElementById('play').addEventListener('click', () => {
     console.log('Toggle play/pause');
 })
@@ -10,7 +12,8 @@ document.getElementById('next').addEventListener('click', () => {
     console.log('Next track');
 })
 
+
 setInterval(async () => {
-    const info = await window.media.getMediaInfo().then(console.log);
-    console.log(window.media)
-}, 3000);
+    const info = await getMediaInfo();
+    console.log("Now Playing: ", info);
+}, 3000)

@@ -1,6 +1,5 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const { getMediaInfo } = require('./fetchmedia');
 require('electron-reload')(path.join(__dirname, 'style.css'), {
     electron: require(`${__dirname}/node_modules/electron`)
 });
@@ -14,9 +13,9 @@ function createWindow() {
         alwaysOnTop: true,
         resizable: false,
         webPreferences: {
-            preload: path.resolve(__dirname, 'preload.js'), 
-            nodeIntegration: false,
-            contextIsolation: true,
+            sandbox: false,
+            nodeIntegration: true,
+            contextIsolation: false,
         }
     });
 

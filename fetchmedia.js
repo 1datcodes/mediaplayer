@@ -33,7 +33,7 @@ async function getMediaInfo() {
                     coverArt: data['mpris:artUrl'] ? data['mpris:artUrl'].value : null,
                 });
             } catch (error) {
-                console.error(`Error fetching metadata from ${player}:`, error);
+                console.log(`Error fetching metadata from ${player}:`, error);
             }
         }
     } catch (error) {
