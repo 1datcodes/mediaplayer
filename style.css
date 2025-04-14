@@ -59,6 +59,12 @@ body {
     gap: 4px;
     margin-bottom: 8px;
     -webkit-app-region: no-drag;
+
+    img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
 }
 
 .controls button {
