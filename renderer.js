@@ -1,4 +1,5 @@
 const { getMediaInfo } = require("./fetchmedia");
+let playState = false;
 
 document.getElementById("play").addEventListener("click", () => {
   console.log("Toggle play/pause");
