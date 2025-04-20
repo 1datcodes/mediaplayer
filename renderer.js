@@ -1,16 +1,19 @@
-const { getMediaInfo } = require("./fetchmedia");
+const { getMediaInfo, getActivePlayer, playPause, next, prev } = require("./fetchmedia");
 let playState = false;
 
-document.getElementById("play").addEventListener("click", () => {
+document.getElementById("play-pause").addEventListener("click", () => {
   console.log("Toggle play/pause");
+  playPause();
 });
 
 document.getElementById("prev").addEventListener("click", () => {
   console.log("Previous track");
+  prev();
 });
 
 document.getElementById("next").addEventListener("click", () => {
   console.log("Next track");
+  next();
 });
 
 setInterval(async () => {
