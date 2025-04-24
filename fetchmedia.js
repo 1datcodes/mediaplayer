@@ -64,7 +64,7 @@ async function getActivePlayer() {
       const obj = await bus.getProxyObject(player, "/org/mpris/MediaPlayer2");
       activePlayers.push(obj);
     } catch (error) {
-      console.log(`Error fetching metadata from ${player}:`, error);
+      //console.log(`Error fetching metadata from ${player}:`, error);
     }
   }
 
