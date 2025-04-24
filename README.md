@@ -11,8 +11,8 @@ A lightweight Electronjs-based widget that displays the currently playing track 
 
 ## Prerequisites
 
-- [Node.js] (https://nodejs.org) (v14 or later)
-- [npm] (https://www.npmjs.com) (comes with Node.js)
+- [Node.js](https://nodejs.org) (v14 or later)
+- [npm](https://www.npmjs.com) (comes with Node.js)
 - A Linux environment with MPRIS-compatible media players
 
 ## Installation
