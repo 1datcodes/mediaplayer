@@ -90,6 +90,16 @@ async function playPause() {
   }
 }
 
+async function status() {
+  const player = await getActivePlayer();
+  const props = player.getInterface("org.freedesktop.DBus.Properties");
+  const status = await props.Get(
+    "org.mpris.MediaPlayer2.Player",
+    "PlaybackStatus",
+  );
+  return status.value;
+}
+
 async function next() {
   const player = await getActivePlayer().then((player) => player.getInterface("org.mpris.MediaPlayer2.Player"));
   await player.Next();
@@ -100,4 +110,4 @@ async function prev() {
   await player.Previous();
 }
 
-module.exports = { getMediaInfo, getActivePlayer, playPause, next, prev };
+module.exports = { getMediaInfo, getActivePlayer, playPause, next, prev, status };
